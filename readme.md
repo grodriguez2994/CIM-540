@@ -9,6 +9,6 @@ Intro to creative coding
 
 [Google.com] (http://google.com)
 
-![This is just a message] 
+![This is just a message] (the image link goes in here)
 
 
