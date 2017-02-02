@@ -61,11 +61,3 @@ line(mouthX, mouthY + mouthH/2, mouthX + mouthW, mouthY + mouthH/2);
 
 
 
-
-
-
-
-
-
-
-
