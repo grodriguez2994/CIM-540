@@ -19,13 +19,11 @@ function draw() {
     if (counter < 0) {
         //limit one  
         ballDir = true;
-        console.log("left hit:" + counter);
     }
 
     if (counter > width) {
         //limit two
         ballDir = false;
-        console.log("right hit");
     }
 
     //    if (ballDir == true){
@@ -52,8 +50,6 @@ function draw() {
     } else {
         fill("yellow");
     }
-
-    console.log(counter);
 
 
     // if(counter > width){
@@ -138,22 +134,6 @@ function draw() {
 //    
 //}
 //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
