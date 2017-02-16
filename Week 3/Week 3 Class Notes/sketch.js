@@ -36,6 +36,7 @@ function draw() {
     
     mapX = map(mouseX, 0, width, -10,10);
     
+    //mouse cursor
     ellipse (mouseX,mouseY,10,10);
     
     ellipse (random(width), random(height),50,50); 
