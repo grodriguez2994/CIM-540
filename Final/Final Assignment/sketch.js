@@ -1,7 +1,5 @@
 var currentInput = '';
 
-var img, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15, img16, img17, img18, img19, img20, img21, img22, img23, img24, img25, img26;
-
 var currentImage;
 
 var boxHeight = 100;
@@ -11,152 +9,162 @@ var boxWidth = 1000;
 //height
 var boxCargo = 300;
 
-var currentInput = new p5.SpeechRec(); // new P5.SpeechRec object
+var myRec = new p5.SpeechRec(); // new P5.SpeechRec object
 
 function setup() {
     createCanvas(3000, 6000);
-    
-        textSize(32);
-		textAlign(CENTER);
-    	text("say something", width/2, height/2);
-		currentInput.onResult = showResult;
-		currentInput.start();
+    myRec.onEnd = showResult;
+    myRec.start(); 
 
-    img = loadImage("images/1.png");
-    img2 = loadImage("images/2.png");
-    img3 = loadImage("images/3.png");
-    img4 = loadImage("images/4.png");
-    img5 = loadImage("images/5.png");
-    img6 = loadImage("images/6.png");
-    img7 = loadImage("images/7.png");
-    img8 = loadImage("images/8.png");
-    img9 = loadImage("images/9.png");
-    img10 = loadImage("images/10.png");
-    img11 = loadImage("images/11.png");
-    img12 = loadImage("images/12.png");
-    img13 = loadImage("images/13.png");
-    img14 = loadImage("images/14.png");
-    img15 = loadImage("images/15.png");
-    img16 = loadImage("images/16.png");
-    img17 = loadImage("images/17.png");
-    img18 = loadImage("images/18.png");
-    img19 = loadImage("images/19.png");
-    img20 = loadImage("images/20.png");
-    img21 = loadImage("images/21.png");
-    img22 = loadImage("images/22.png");
-    img23 = loadImage("images/23.png");
-    img24 = loadImage("images/24.png");
-    img25 = loadImage("images/25.png");
-    img26 = loadImage("images/26.png");
-
-    var inp = createInput('');
-    inp.input(myInputEvent);
-
-    inp.position(10, 10);
+    noStroke();
 }
 
 
 function draw() {
     background(255);
 
-//    if (currentInput == "a") {
-//        image(img, 0, height / 2, img.width / 2, img.height / 2);
-//    } else if (currentInput == "b") {
-//        image(img2, 0, height / 2, img.width / 2, img.height / 2);
-//    }
+    //    for loop
 
-
-//    for loop
-    
-        for(var i = 0; i < currentInput.length; i++){
-            
-          if (currentInput[i] == "a") {
-              currentImage = img;
-          } else if (currentInput[i] == "b") {
-             currentImage = img2;
-          } else if (currentInput[i] == "c") {
-             currentImage = img3;
+    for (var i = 0; i < currentInput.length; i++) {
+        if (currentInput[i] == "a") {
+            currentImage = color(219, 73, 133, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "b") {
+            currentImage = color(22, 124, 124, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "c") {
+            currentImage = color(71, 166, 221, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
         } else if (currentInput[i] == "d") {
-             currentImage = img4;
-             } else if (currentInput[i] == "e") {
-             currentImage = img5;
-              } else if (currentInput[i] == "f") {
-             currentImage = img6;
-          } else if (currentInput[i] == "g") {
-             currentImage = img7;
+            currentImage = color(197, 217, 45, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "e") {
+            currentImage = color(129, 88, 164, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "f") {
+            currentImage = color(100, 197, 180, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "g") {
+            currentImage = color(101, 192, 129, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
         } else if (currentInput[i] == "h") {
-             currentImage = img8;
-             } else if (currentInput[i] == "i") {
-             currentImage = img9;
-              } else if (currentInput[i] == "j") {
-             currentImage = img10;
-          } else if (currentInput[i] == "k") {
-             currentImage = img11;
+            currentImage = color(220, 73,144, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "i") {
+            currentImage = color(236, 29, 36, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "j") {
+            currentImage = color(82, 129, 194, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "k") {
+            currentImage = color(121, 193, 67, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
         } else if (currentInput[i] == "l") {
-             currentImage = img12;
-             } else if (currentInput[i] == "m") {
-             currentImage = img13;
-              } else if (currentInput[i] == "n") {
-             currentImage = img14;
-          } else if (currentInput[i] == "o") {
-             currentImage = img15;
+            currentImage = color(228, 229, 57, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "m") {
+            currentImage = color(160, 138, 192, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "n") {
+            currentImage = color(171, 89, 163, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "o") {
+            currentImage = color(220, 156, 72, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
         } else if (currentInput[i] == "p") {
-             currentImage = img16;
-             } else if (currentInput[i] == "q") {
-             currentImage = img17;
-              } else if (currentInput[i] == "r") {
-             currentImage = img18;
-          } else if (currentInput[i] == "s") {
-             currentImage = img19;
+            currentImage = color(216, 110, 74, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "q") {
+            currentImage = color(229, 216, 61, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "r") {
+            currentImage = color(215, 69, 152, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "s") {
+            currentImage = color(220, 175, 210, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
         } else if (currentInput[i] == "t") {
-             currentImage = img20;
-             } else if (currentInput[i] == "u") {
-             currentImage = img21;
-              } else if (currentInput[i] == "v") {
-             currentImage = img22;
-          } else if (currentInput[i] == "w") {
-             currentImage = img23;
+            currentImage = color(208, 43, 39, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "u") {
+            currentImage = color(219, 73, 133, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "v") {
+            currentImage = color(251, 223, 5, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "w") {
+            currentImage = color(15, 138, 67, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
         } else if (currentInput[i] == "x") {
-             currentImage = img24;
-             } else if (currentInput[i] == "y") {
-             currentImage = img25;
-             } else if (currentInput[i] == "z") {
-             currentImage = img26;
-             }
-          
-          //image(0,(boxHeight * i) - 10, width, height);
-            
-            image(currentImage, 100, (boxHeight * i) -10, boxWidth/2, boxCargo/2);
-            
-            
-            //currentImage[i].display(); 
+            currentImage = color(117, 147, 204, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "y") {
+            currentImage = color(148, 88, 163, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else if (currentInput[i] == "z") {
+            currentImage = color(225, 100, 38, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+             } else if (currentInput[i] == " ") {
+            currentImage = color(225, 100, 38, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        } else {
+            currentImage = color(255, 255, 255, 44);
+            fill(currentImage);
+            rect(100, (boxHeight * i) - 10, boxWidth / 2, boxCargo / 2);
+        }
+
     }
     
-
-    //console.log(currentInput.length);
+  
+    fill(0);
+    textSize(32);
+    textAlign(CENTER);
+    text("say something", 140, 70);
+    //text(currentInput, width/2, height/2 + 100);
+    
+    
 }
 
 function myInputEvent() {
-   console.log('you are typing: ', this.value());
+    console.log('you are typing: ', this.value());
     currentInput = this.value();
-
-} 
-
+}
 
 
-//function showResult()
-//	{
-//		if(currentInput.resultValue==true) {
-//			console.log(currentInput.resultString);
-//		}
-//	}
 
-
-	function showResult()
-	{
-		if(currentInput.resultValue==true) {
-			background(192, 255, 192);
-			text(currentInput.resultString, width/2, height/2);
-			console.log(currentInput.resultString);
-		}
-	}
+function showResult() {
+    if (myRec.resultValue == true) {
+        //currentInput = "";
+        background(192, 255, 192);
+        text(myRec.resultString, width / 2, height / 2);
+        console.log(myRec.resultString);
+        currentInput = myRec.resultString;
+    }
+}
