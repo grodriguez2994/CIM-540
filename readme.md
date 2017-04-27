@@ -1,1 +1,1 @@
-I decided to use expand on my midterm project for my final. I added the speech library which is pretty cool. I wanted to take my art piece further by allowing the voice to control it. 
+I decided to use expand on my midterm project for my final. I added the speech library which is pretty cool. I wanted to take my art piece further by allowing the voice to control it.
